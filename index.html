@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+Bhai+2&family=Bangers&family=Lobster&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+      <style>
+          
+          
+
+body {
+    background-color:black;
+    align-items:center ;
+    justify-content:center ;
+    padding:8px;
+    margin:0;
+
+}
+h1{
+text-align:center ;
+color:#28323b;
+font-weight:bolder ;
+    font-family: 'Baloo Bhai 2', cursive
+    
+}
+
+.container{
+    color:white;
+    padding-bottom:49px;
+  /* display:flex;*/
+  display:inline-block ;
+    align-items:center ;
+    font-weight:bolder;
+    justify-content:center ;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.container #s1{
+    border:5px solid white;
+    padding:22px;
+    margin:12px;
+    /*height:20em;
+    width:80vw;*/
+    border-radius:20pt;
+}
+
+#f1{
+    border:2px solid white;
+}
+
+.container #s2{
+    border:5px solid white;
+    padding:22px;
+    margin:12px;
+ /*   height:20em;
+    width:80vw;*/
+    border-radius:20pt;
+}    
+
+.container #s3{
+    border:5px solid white;
+    padding:22px;
+    margin:12px;
+ /*   height:20em;
+    width:80vw;*/
+    border-radius:20pt;
+}
+
+.container #eg{
+      border:5px solid white;
+    padding:22px;
+    margin:12px;
+ /*   height:20em;
+    width:80vw;*/
+    border-radius:20pt;
+    word-wrap:break-word;
+}
+
+   .bg{
+       animation: slide 3s ease-in-out infinite alternate;
+       opacity: .5;
+       position: fixed;
+       top: 0;
+       left: -50%;
+       right: -50%;
+       bottom: 0;
+       z-index: -1;
+       background: linear-gradient(-60deg,#6c3 50%, #09f 50%);
+   }
+   .bg2{
+       animation-duration: 4s;
+       animation-direction: alternate-reverse;
+   }
+   .bg3{
+       animation-duration: 5s;
+       animation-direction: alternate-reverse;
+   }
+    
+    .content {
+        background-color:rgba(255,255,255,.4);
+        border-radius:.25em;
+        box-shadow:0 0 .25em rgba(0,0,0,.25);
+        box-sizing:border-box;
+        left:50%;
+        padding:10vmin;
+        position:fixed;
+        text-align:center;
+        top:50%;
+        transform:translate(-50%, -50%);
+    }
+
+
+    @keyframes slide {
+       /* 0% {
+            transform:translateX(-15%);
+        }*/
+
+        100% {
+            transform:translateX(15%);
+        }
+    }
+
+
+          
+      </style>
+    </head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'>
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] }, "HTML-CSS": { linebreaks: { automatic: true, width: "container" } } }); 
+
+    </script>
+    <body>
+    <h1>BINOMIAL  EXPANSION  TRICK  BY<br> <b><em>Akash Singh</em></b></h1>
+        <div class="container">
+            <div id="s1">
+            <h2>STEP 1</h2>: Observe the problem<hr><br>It may be of one of the following forms:
+            <ul>
+                <li>(a+b)<sup>n</sup> + (a-b)<sup>n</sup></li>
+                <li>(a+b)<sup>n</sup> - (a-b)<sup>n</sup></li>
+            </ul>
+            </div>
+    
+            <div id="s2">
+                <h2>STEP 2</h2>: Notice the index <b>n</b><hr><br>It will be either <b>odd</b> or <b>even.</b> <br><br>Now find the total no. of terms in the given expansion using following rules: <ul>
+                <li>
+                  <b>Case 1:</b> <hr> If the index <b>n</b> is odd then, the no. of terms(NOT) in: <ul><br><li>(a+b)<sup>n</sup> + (a-b)<sup>n</sup></li><li>(a+b)<sup>n</sup> -  (a-b)<sup>n</sup></li></ul><br> are given by,
+                </li>
+                <br>
+                <div id="f1">
+                    $$NOT = {n + 1 \over 2}$$
+                </div>
+                <br>
+                <li>
+                    <b>Case 2:</b> <hr> If the index <b>n</b> is even then, the no. of terms(NOT) in: <ul><br><li>(a+b)<sup>n</sup> + (a-b)<sup>n</sup></li><br> are given by,
+                </li>
+                <br>
+                <div id="f1">
+                    $$NOT = {{n \over 2 }+ 1}$$
+                </div>
+                <br><li>(a+b)<sup>n</sup> - (a-b)<sup>n</sup></li><br> are given by,
+                </li>
+                <br>
+                <div id="f1">
+                    $$NOT = {{n \over 2 }}$$
+                </div></li>
+                
+                
+                    </ul>
+                </li>
+                </ul>
+           Once, you have successfully found the no. of terms the rest is as easy as खाला जी का घर ।     
+            </div>
+            <div id="s3">
+               <h2>STEP 3</h2>: <hr><br>
+                If the given problem is seperated by + sign then, just start expanding it evenly and multiply whole by 2 i.e. $$2\sum_{r=0}^n {^nC_r}a^{n-r}b^r$$ <br>where,r is incremented by 2 i.e. r=r+2 until n
+                <br><br>
+                
+                If the given problem is seperated by - sign then, just start expanding it oddly and multiply whole by 2 i.e. $$2\sum_{r=1}^n {^nC_r}a^{n-r}b^r$$ <br>where,r is incremented by 2 i.e. r=r+2 until n
+            </div>
+            
+            <div id="eg">
+             Example 1:<br>   (a+b)<sup>6</sup> + (a-b)<sup>6</sup><br>
+                =$$2({^6C_0a^6} + {^6C_2a^4b^2} + {^6C_4a^2b^4} + {^6C_6b^6})$$
+        
+            <br>
+            <br>
+            Example 2:<br>
+            (a+b)<sup>5</sup> - (a-b)<sup>5</sup><br>
+            =$$2({^5C_1a^4} + {^5C_3a^2b^3} + {^5C_5b^5})$$
+            </div>
+        </div>
+        <div class="bg"></div>
+
+<div class="bg bg2"></div>
+
+<div class="bg bg3"></div>
+
+
+
+    </body>
+</html>
